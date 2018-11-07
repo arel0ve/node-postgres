@@ -14,6 +14,7 @@ const app = express();
 const dbIndexes = require('./queries/db-indexes');
 
 dbIndexes.createPupsIndex();
+dbIndexes.createCityIndex();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
