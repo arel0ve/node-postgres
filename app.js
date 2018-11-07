@@ -11,6 +11,10 @@ const citiesRouter = require('./routes/cities');
 
 const app = express();
 
+const dbIndexes = require('./queries/db-indexes');
+
+dbIndexes.createPupsIndex();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

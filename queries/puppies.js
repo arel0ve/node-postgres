@@ -30,7 +30,7 @@ function getAllPuppies(req, res, next) {
           ON (k.master = m.id)
         INNER JOIN cities c
           ON (m.city = c.id)
-      ORDER BY type, city, sex, age, breed, name
+      ORDER BY type, breed, age, sex, city, name
       LIMIT ${to - from + 1} OFFSET ${from}`)
       .then(data => {
         res.status(200)

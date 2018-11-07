@@ -67,7 +67,7 @@ function getMastersByPuppies(req, res, next) {
         ON (masters.city = cities.id) 
       INNER JOIN pups 
         ON (pups.master = masters.id) 
-      WHERE pups.breed ILIKE '%${breed}%'`;
+      WHERE pups.breed ILIKE '${breed}%'`;
 
   if (age) {
     query += ` AND pups.age = '${age}'`;
